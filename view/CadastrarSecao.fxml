@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="201.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarSecaoController">
+   <children>
+      <GridPane layoutX="9.0" layoutY="35.0" prefHeight="99.0" prefWidth="321.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="278.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelSecaoFilme" text="Filme" />
+            <Label fx:id="labelSecaoSala" text="Sala" GridPane.rowIndex="1" />
+            <Label fx:id="labelSecaoHorario" text="Horário" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldSecaoHorario" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="comboFilmes" prefHeight="25.0" prefWidth="275.0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="comboSalas" prefHeight="25.0" prefWidth="276.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Group layoutX="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Button fx:id="botaoConfirmar" layoutX="129.0" layoutY="137.0" mnemonicParsing="false" onAction="#acaoBotaoConfirmar" text="Confirmar" />
+            <Button fx:id="botaoCancelar" layoutX="208.0" layoutY="137.0" mnemonicParsing="false" onAction="#acaoBotaoCancelar" text="Cancelar" />
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

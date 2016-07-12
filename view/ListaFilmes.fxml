@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListaFilmesController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="123.0" layoutY="45.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tabelaFilme" layoutX="50.0" layoutY="14.0" prefHeight="196.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="colunaFilmeCodigo" prefWidth="75.0" text="CÓDIGO" />
+                      <TableColumn fx:id="colunaFilmeGenero" prefWidth="75.0" text="GENERO" />
+                        <TableColumn fx:id="colunaFilmeNome" prefWidth="75.0" text="NOME" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="264.0" layoutY="7.0" text="FILME">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="147.0" layoutY="43.0" prefHeight="120.0" prefWidth="452.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="60.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="322.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="CÓDIGO" />
+                        <Label text="GENERO" GridPane.rowIndex="1" />
+                        <Label text="NOME" GridPane.rowIndex="2" />
+                        <Label text="SINOPSE" GridPane.rowIndex="3" />
+                        <Label fx:id="labelFilmeCodigo" prefWidth="300.0" GridPane.columnIndex="1" />
+                        <Label fx:id="labelFilmeGenero" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelFilmeNome" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelFilmeSinopse" prefHeight="17.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <Group AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+                     <children>
+                        <Button fx:id="botaoFilmeInserir" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" onAction="#acaoBotaoInserir" prefHeight="25.0" prefWidth="64.0" text="INSERIR" />
+                        <Button fx:id="botaoFilmeApagar" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" onAction="#acaoBotaoApagar" prefHeight="25.0" prefWidth="64.0" text="APAGAR" />
+                        <Button fx:id="botaoFilmeAlterar" layoutX="14.0" layoutY="73.0" mnemonicParsing="false" onAction="#acaoBotaoAlterar" text="ALTERAR" />
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

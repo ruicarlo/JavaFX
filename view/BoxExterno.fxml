@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="AnchorPane" prefHeight="422.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BoxExternoController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Cadastros">
+                    <items>
+                        <MenuItem fx:id="menuItemFilmes" mnemonicParsing="false" onAction="#acaoMenuItemFilmes" text="Filmes" />
+                        <MenuItem fx:id="menuItemSalas"  mnemonicParsing="false" onAction="#acaoMenuItemSalas"  text="Salas" />
+                        <MenuItem fx:id="menuItemSecoes" mnemonicParsing="false" onAction="#acaoMenuItemSecoes" text="Seções" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Processos">
+                    <items>
+                        <MenuItem fx:id="menuItemVendas" mnemonicParsing="false" onAction="#acaoMenuItemVendas" text="Vendas" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Relatórios">
+                    <items>
+                        <MenuItem fx:id="menuItemRelatoriosVendasPorSecao" mnemonicParsing="false" onAction="#acaoMenuItemRelatorioVendaPorSecao" text="Vendas por Seção" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="boxInterno" prefHeight="400.0" prefWidth="600.0" />
+    </children>    
+</VBox>
